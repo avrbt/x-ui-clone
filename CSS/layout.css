@@ -17,3 +17,15 @@
   width: 300px;
   border: 1px solid blue;
 }
+
+/* Each nav item should itself be a flex row (icon + text). */
+.navItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Hover effect on nav */
+.navItem:hover {
+    background-color: #c02525;
+}
