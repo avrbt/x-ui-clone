@@ -1,51 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X UI Clone</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X UI Clone</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/feed.css" />
+  <link rel="stylesheet" href="css/post.css" />
 </head>
 <body>
-    <div class ="app">
 
-        <!--Left Sidebar jisme home,notifications etc honge -->
-        <aside class="sidebar">
-            <h2>Sidebar</h2>
-            <div class="logo">
-                <h1>X</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Explore</li>
-                    <li>Notifications</li>
-                    <li>Messages</li>
-                    <li>Bookmarks</li>
-                    <li>Lists</li>
-                    <li>Profile</li>
-                    <li>More</li>
-                </ul>
-            </nav>
-            <!-- Add a Post button at the bottom-->
-            <button class="post-button">Post</button>
+  <div class="app">
 
-       </aside>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">X</div>
 
-        <!-- beech wali feed-->
-        <main class="feed">
-            <h2>Feed</h2>   
-        </main>
-        
-        <!-- right sidebar jisme trending topics etc honge -->
-        <aside class="widgets">
-            <h2>Widgets</h2>
-        </aside>
-        
+      <nav class="nav">
+        <div class="nav-item active">Home</div>
+        <div class="nav-item">Explore</div>
+        <div class="nav-item">Notifications</div>
+        <div class="nav-item">Messages</div>
+        <div class="nav-item">Bookmarks</div>
+        <div class="nav-item">Profile</div>
+      </nav>
 
+      <button class="post-btn">Post</button>
+    </aside>
 
-    </div>
-    
+    <!-- Feed -->
+    <main class="feed">
+
+      <!-- Composer -->
+      <div class="composer">
+        <div class="avatar"></div>
+
+        <div class="composer-content">
+          <textarea placeholder="What’s happening?"></textarea>
+          <div class="composer-actions">
+            <button>Post</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Posts -->
+      <div class="post">
+        <div class="avatar"></div>
+        <div class="post-content">
+          <div class="post-header">
+            <strong>Aviral</strong> <span>@avrbt · 1h</span>
+          </div>
+          <p>Building an X UI clone 🚀</p>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="avatar"></div>
+        <div class="post-content">
+          <div class="post-header">
+            <strong>Dev</strong> <span>@frontend · 2h</span>
+          </div>
+          <p>Consistency beats motivation.</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Widgets -->
+    <aside class="widgets">
+      <h3>Trends</h3>
+      <p>#100DaysOfCode</p>
+      <p>#Frontend</p>
+      <p>#WebDev</p>
+    </aside>
+
+  </div>
+
 </body>
 </html>

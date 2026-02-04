@@ -1,31 +1,6 @@
-.app{
-    display: flex;
-    min-height: 100vh;
-}
-
-.sidebar{
-    width: 250px;
-    border: 1px solid red;
-}
-
-.feed {
-  flex: 1;
-  border: 1px solid green;
-}
-
-.widgets {
-  width: 300px;
-  border: 1px solid blue;
-}
-
-/* Each nav item should itself be a flex row (icon + text). */
-.navItem {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-/* Hover effect on nav */
-.navItem:hover {
-    background-color: #c02525;
+.app {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
 }

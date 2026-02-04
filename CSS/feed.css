@@ -1,0 +1,37 @@
+.feed {
+  flex: 1;
+  border-right: 1px solid #e6e6e6;
+}
+
+.composer {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.composer-content {
+  flex: 1;
+}
+
+.composer textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 18px;
+  outline: none;
+}
+
+.composer-actions {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.composer-actions button {
+  background: #1d9bf0;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
