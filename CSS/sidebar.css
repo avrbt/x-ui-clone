@@ -1,44 +1,70 @@
 .sidebar {
-  width: 250px;
-  padding: 16px;
-  border-right: 1px solid #e6e6e6;
+  width: 100%;
+  padding: 12px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 30px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.logo:hover,
+.nav-item:hover {
+  background: var(--hover);
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 2px;
 }
 
 .nav-item {
-  padding: 10px 14px;
+  border: 0;
+  text-align: left;
+  background: transparent;
+  padding: 12px;
   border-radius: 999px;
+  font-size: 20px;
   cursor: pointer;
-}
-
-.nav-item:hover {
-  background: #f5f5f5;
 }
 
 .nav-item.active {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .post-btn {
-  margin-top: auto;
-  padding: 12px;
-  border: none;
-  background: #1d9bf0;
+  margin-top: 12px;
+  border: 0;
+  background: var(--accent);
   color: white;
   border-radius: 999px;
-  font-size: 16px;
+  height: 52px;
+  font-weight: 700;
   cursor: pointer;
+}
+
+.profile-chip {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 999px;
+  padding: 8px;
+}
+
+.profile-chip:hover {
+  background: var(--hover);
+}
+
+.profile-chip p {
+  color: var(--muted);
+  font-size: 14px;
 }

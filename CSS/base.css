@@ -1,3 +1,25 @@
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #0f1419;
+  --muted: #536471;
+  --border: #e6ecf0;
+  --accent: #1d9bf0;
+  --hover: #eff3f4;
+  --chip: #f7f9f9;
+}
+
+body.dark {
+  --bg: #000000;
+  --surface: #000000;
+  --text: #e7e9ea;
+  --muted: #71767b;
+  --border: #2f3336;
+  --accent: #1d9bf0;
+  --hover: #16181c;
+  --chip: #16181c;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +27,29 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #ffffff;
-  color: #0f1419;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button, input, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d9bf0, #7848ff);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-weight: 700;
+}
+
+.avatar.small {
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
 }

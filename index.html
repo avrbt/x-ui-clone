@@ -3,81 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>X UI Clone</title>
+  <title>X Clone — Home</title>
 
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/sidebar.css" />
-  <link rel="stylesheet" href="css/feed.css" />
-  <link rel="stylesheet" href="css/post.css" />
+  <link rel="stylesheet" href="CSS/base.css" />
+  <link rel="stylesheet" href="CSS/layout.css" />
+  <link rel="stylesheet" href="CSS/sidebar.css" />
+  <link rel="stylesheet" href="CSS/feed.css" />
+  <link rel="stylesheet" href="CSS/post.css" />
 </head>
 <body>
-
   <div class="app">
-
-    <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="logo">X</div>
-
+      <div class="logo">𝕏</div>
       <nav class="nav">
-        <div class="nav-item active">Home</div>
-        <div class="nav-item">Explore</div>
-        <div class="nav-item">Notifications</div>
-        <div class="nav-item">Messages</div>
-        <div class="nav-item">Bookmarks</div>
-        <div class="nav-item">Profile</div>
+        <button class="nav-item active">Home</button>
+        <button class="nav-item">Explore</button>
+        <button class="nav-item">Notifications</button>
+        <button class="nav-item">Messages</button>
+        <button class="nav-item">Grok</button>
+        <button class="nav-item">Communities</button>
+        <button class="nav-item">Premium</button>
+        <button class="nav-item">Profile</button>
       </nav>
 
-      <button class="post-btn">Post</button>
+      <button class="post-btn" id="primary-post">Post</button>
+
+      <div class="profile-chip">
+        <div class="avatar small">A</div>
+        <div>
+          <strong>Aviral</strong>
+          <p>@avrbt</p>
+        </div>
+      </div>
     </aside>
 
-    <!-- Feed -->
     <main class="feed">
+      <header class="feed-header">
+        <h1>Home</h1>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">◐</button>
+      </header>
 
-      <!-- Composer -->
-      <div class="composer">
-        <div class="avatar"></div>
+      <div class="tabs">
+        <button class="tab active" data-tab="for-you">For you</button>
+        <button class="tab" data-tab="following">Following</button>
+      </div>
+
+      <section class="composer" id="composer">
+        <div class="avatar">A</div>
 
         <div class="composer-content">
-          <textarea placeholder="What’s happening?"></textarea>
+          <textarea id="post-text" maxlength="280" placeholder="What is happening?!"></textarea>
+
+          <div class="composer-row">
+            <input id="media-url" type="url" placeholder="Optional image URL" />
+          </div>
+
           <div class="composer-actions">
-            <button>Post</button>
+            <span id="char-count">280</span>
+            <button id="create-post">Post</button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Posts -->
-      <div class="post">
-        <div class="avatar"></div>
-        <div class="post-content">
-          <div class="post-header">
-            <strong>Aviral</strong> <span>@avrbt · 1h</span>
-          </div>
-          <p>Building an X UI clone 🚀</p>
-        </div>
-      </div>
-
-      <div class="post">
-        <div class="avatar"></div>
-        <div class="post-content">
-          <div class="post-header">
-            <strong>Dev</strong> <span>@frontend · 2h</span>
-          </div>
-          <p>Consistency beats motivation.</p>
-        </div>
-      </div>
-
+      <section id="timeline" aria-live="polite"></section>
     </main>
 
-    <!-- Widgets -->
     <aside class="widgets">
-      <h3>Trends</h3>
-      <p>#100DaysOfCode</p>
-      <p>#Frontend</p>
-      <p>#WebDev</p>
-    </aside>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search" />
+      </div>
 
+      <section class="widget-card">
+        <h3>Subscribe to Premium</h3>
+        <p>Unlock ad-reduced timelines, longer posts, and creator tools.</p>
+        <button class="pill">Subscribe</button>
+      </section>
+
+      <section class="widget-card">
+        <h3>Trends for you</h3>
+        <ul id="trends-list"></ul>
+      </section>
+
+      <section class="widget-card">
+        <h3>Who to follow</h3>
+        <ul class="follow-list">
+          <li><span>@openweb</span><button class="pill">Follow</button></li>
+          <li><span>@productbuild</span><button class="pill">Follow</button></li>
+          <li><span>@frontendops</span><button class="pill">Follow</button></li>
+        </ul>
+      </section>
+    </aside>
   </div>
 
+  <script src="JS/main.js"></script>
 </body>
 </html>
